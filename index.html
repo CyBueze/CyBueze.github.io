@@ -397,6 +397,22 @@
 
 
   </main>
+<script async src="https://telegram.org/js/telegram-web-app.js"></script>
 
+    <!-- Your custom JavaScript code -->
+    <script>
+        // Wait until the Telegram Web App SDK is ready
+        window.Telegram.WebApp.ready();
+
+        // Log a message to the console
+        console.log('Telegram Web App initialized');
+
+        // Example: Access the Telegram user data
+        const user = window.Telegram.WebApp.initDataUnsafe;
+        console.log(user);
+
+        // Additional logic to interact with the Web App SDK
+        // For example, you can access user information or handle interactions
+    </script>
 </body>
 </html>
