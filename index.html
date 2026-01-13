@@ -1,14 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mini App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-        window.Telegram.WebApp.ready();
-        console.log('Telegram Web App initialized');
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iwu Chibueze | Backend Developer</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <h1>Hello from Mini App</h1>
+<body class="min-h-screen bg-black text-zinc-100">
+
+  <main class="max-w-5xl mx-auto px-6 py-20">
+
+    <!-- Header / Hero -->
+    <header class="mb-24">
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-1 text-sm text-zinc-300 mb-6">
+        <i data-lucide="server" class="w-4 h-4"></i>
+        Backend Engineer
+      </span>
+
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">
+        Iwu Chibueze
+      </h1>
+
+      <p class="mt-6 text-lg text-zinc-400 max-w-2xl">
+        I build clean, production-ready backend systems with NestJS — focused on architecture, authentication, and scalable REST APIs.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="mailto:caretsquare@gmail.com" class="card flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          Email
+        </a>
+        <a href="https://github.com/CyBueze" class="card flex items-center gap-2">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="mb-24">
+      <h2 class="section-title">About</h2>
+      <div class="card max-w-3xl">
+        <p class="text-zinc-400 leading-relaxed">
+          I’m a self-taught backend developer focused on building systems that are easy to reason about, test, and scale. Since late 2023, I’ve worked extensively with NestJS, PostgreSQL, and authentication systems, translating real-world requirements into maintainable backend architectures.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-24">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="skill-card"><i data-lucide="boxes" class="icon"></i>NestJS</div>
+        <div class="skill-card"><i data-lucide="cpu" class="icon"></i>Node.js</div>
+        <div class="skill-card"><i data-lucide="database" class="icon"></i>PostgreSQL</div>
+        <div class="skill-card"><i data-lucide="layers" class="icon"></i>TypeORM</div>
+        <div class="skill-card"><i data-lucide="lock" class="icon"></i>Passport.js</div>
+        <div class="skill-card"><i data-lucide="link" class="icon"></i>REST APIs</div>
+        <div class="skill-card"><i data-lucide="check-circle" class="icon"></i>Jest</div>
+        <div class="skill-card"><i data-lucide="terminal" class="icon"></i>Express.js</div>
+        <div class="skill-card"><i data-lucide="layout" class="icon"></i>HTML</div>
+        <div class="skill-card"><i data-lucide="palette" class="icon"></i>Tailwind CSS</div>
+        <div class="skill-card"><i data-lucide="zap" class="icon"></i>Alpine.js</div>
+        <div class="skill-card"><i data-lucide="activity" class="icon"></i>HTMX</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-24">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-medium">Church Management Platform</h3>
+            <i data-lucide="folder" class="w-5 h-5 text-zinc-500"></i>
+          </div>
+          <p class="text-sm text-zinc-500 mb-4">
+            NestJS · PostgreSQL · TypeORM · Passport
+          </p>
+          <ul class="space-y-2 text-sm text-zinc-400 mb-6">
+            <li>• Modular NestJS backend with admin authentication</li>
+            <li>• Relational data modeling with many-to-many relationships</li>
+            <li>• Sermon APIs with pagination, filtering, and search</li>
+            <li>• Designed for production deployment</li>
+          </ul>
+          <div class="flex gap-3">
+            <a href="https://github.com/CyBueze/sodi" class="mini-card"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-12 border-t border-white/10 text-sm text-zinc-500 flex items-center justify-between">
+      <p>© 2026 Iwu Chibueze</p>
+      <span>Backend Developer (NestJS)</span>
+    </footer>
+
+  </main>
+
+  <style>
+    .section-title {
+      @apply text-2xl font-medium mb-8;
+    }
+
+    .card {
+      @apply rounded-xl bg-white/5 px-4 py-3 text-sm text-zinc-200 ring-1 ring-white/10 hover:bg-white/10 transition;
+    }
+
+    .skill-card {
+      @apply flex items-center gap-3 rounded-xl bg-white/5 px-4 py-4 text-sm text-zinc-300 ring-1 ring-white/10 hover:bg-white/10 transition;
+    }
+
+    .project-card {
+      @apply rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 hover:bg-white/10 transition;
+    }
+
+    .mini-card {
+      @apply inline-flex items-center gap-2 rounded-lg bg-black px-3 py-2 text-xs text-zinc-300 ring-1 ring-white/15 hover:bg-white/10 transition;
+    }
+
+    .icon {
+      @apply w-4 h-4 text-zinc-400;
+    }
+  </style>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
 </body>
 </html>
